@@ -1,0 +1,61 @@
+/* Home.css */
+
+.topContent {
+  background-color: #f8f8f8;
+  padding: 20px ;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 93vh; 
+  background-color: black;
+}
+
+.topContent__container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.topContent h1 {
+  color:white;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.topContent p {
+  color: white;
+  font-size: 4rem;
+  margin-bottom: 30px;
+}
+
+.topContent__downloadButton,
+.topContent__workButton {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.topContent__downloadButton {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.topContent__downloadButton:hover {
+  background-color: #2980b9;
+}
+
+.topContent__workButton {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+.topContent__workButton:hover {
+  background-color: #27ae60;
+}
