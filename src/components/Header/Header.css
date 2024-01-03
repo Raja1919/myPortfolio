@@ -36,10 +36,5 @@
 }
 
 .header__right a:hover {
-  color: #007bff; /* Change this to your preferred link text color on hover */
-}
-
-.header__right .active {
-  color: #007bff; /* Change this to your preferred active link text color */
-  font-weight: bold;
+  color: yellow; /* Change this to your preferred link text color on hover */
 }
