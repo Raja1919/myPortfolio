@@ -1,67 +1,82 @@
-// ProjectContainer.js
-import React, { useState } from "react";
-import ProjectItem from "../Project/Project";
+// Project.js
+import React from "react";
 import "./Project.css";
+import img1 from "../Assets/img1.png";
 
 const Project = () => {
-  const [chosen, setChosen] = useState(true);
-
   const clientProjects = [
     {
-      img: "https://www.google.com/url?sa=i&url=https%3A%2F%2Ffreepngimg.com%2Fpng%2F20723-mario-image&psig=AOvVaw1kRoJO5pcR0D0CJQ4AtDUB&ust=1704299396941000&source=images&cd=vfe&ved=0CBIQjRxqFwoTCJiXvpeQv4MDFQAAAAAdAAAAABAE",
-      title: "TheFindtalk",
-      desc: "India's First Social Network where everyone find new people, post photos or videos about them and even follow new people.",
-      link: "https://thefindtalk.com/",
+      img: img1,
+      title: "Student Dashboard",
+      fe: "https://github.com/Raja1919/zen-student-dashboard-frontend",
+      be: "https://github.com/Raja1919/zen-student-dashboard-backend",
+      desc: "Empowering students with effective learning progress tracking, a user-friendly React UI, and secure authentication. Integration with Node.js and Express.js backend APIs ensures seamless access to course materials and real-time grade tracking. MongoDB and Git are leveraged for data storage and version control.",
+      source: "https://monumental-lolly-62d3ef.netlify.app/",
     },
     {
-      img: "https://www.google.com/url?sa=i&url=https%3A%2F%2Ffreepngimg.com%2Fpng%2F20723-mario-image&psig=AOvVaw1kRoJO5pcR0D0CJQ4AtDUB&ust=1704299396941000&source=images&cd=vfe&ved=0CBIQjRxqFwoTCJiXvpeQv4MDFQAAAAAdAAAAABAE",
-      title: "AR Projects Ltd",
-      desc: "AR Projects Ltd is an E-Learning company which provides coding training for both school and college students.",
-      link: "https://www.arprojectsltd.com/",
+      img: img1,
+      title: "UrlShortener",
+      fe: "https://github.com/Raja1919/urlShortener-Frontend",
+      be: "https://github.com/Raja1919/urlShortener-Backend",
+      desc: "MERN-based URL shortener providing a concise, user-friendly, and secure experience. React handles user input, Node.js/Express processes backend operations, and MongoDB stores mappings. Security features include input validation, potential authentication, and rate-limiting. Deployed on platforms like Netlify.",
+      source: "https://monumental-semifreddo-4bee5c.netlify.app/",
     },
     {
-      img: "https://www.google.com/url?sa=i&url=https%3A%2F%2Ffreepngimg.com%2Fpng%2F20723-mario-image&psig=AOvVaw1kRoJO5pcR0D0CJQ4AtDUB&ust=1704299396941000&source=images&cd=vfe&ved=0CBIQjRxqFwoTCJiXvpeQv4MDFQAAAAAdAAAAABAE",
-      title: "Complaint Management System",
-      desc: "It is used in city corporations to handle complaints for particular areas corporation.",
-      link: "https://corporation-management-system.netlify.app/",
+      img: img1,
+      title: "ProductLister",
+      fe: "https://github.com/Raja1919/Product_Lister_frontend",
+      be: "https://github.com/Raja1919/Product_lister_backend",
+      desc: "Efficient city corporation complaint management. User-friendly React frontend for complaint submission, tracking, and resolution updates. Node.js and Express.js backend manages complaint data and database interactions.",
+      source: "https://lambent-kringle-33efaf.netlify.app",
     },
     {
-      img: "https://www.google.com/url?sa=i&url=https%3A%2F%2Ffreepngimg.com%2Fpng%2F20723-mario-image&psig=AOvVaw1kRoJO5pcR0D0CJQ4AtDUB&ust=1704299396941000&source=images&cd=vfe&ved=0CBIQjRxqFwoTCJiXvpeQv4MDFQAAAAAdAAAAABAE",
-      title: "Firegram",
-      desc: "An online platform for everyone to share their images.",
-      link: "https://firegram-65fdc.web.app/",
+      img: img1,
+      title: "NoteApp",
+      desc: "Collaborative online platform for sharing thoughts and images. React-based frontend for creating, editing, and sharing notes. Utilizes Firebase or similar backend for data storage, ensuring a seamless and responsive user experience.",
+      source: "https://monumental-lolly-62d3ef.netlify.app/",
     },
   ];
 
   return (
-    <div>
-      <h1>Projects</h1>
-      <p>
-        Here are some projects that are changing many people's lives and some
-        clone works of large tech companies.
-      </p>
-      <div className="projectContainer__title">
-        <h4
-          className={chosen ? "projectContainer__title--active" : undefined}
-          onClick={() => setChosen(true)}
-        >
-          Client Projects
-        </h4>
+    <div className="work_container">
+      <h1 className="project_heading">My Projects</h1>
+      <div className="project_container">
+        {clientProjects.map((project, index) => (
+          <div className="project_card" key={index}>
+            <img src={project.img} alt={project.title} />
+            <h2 className="project_title">{project.title}</h2>
+            <div className="project_desc">
+              <p>{project.desc}</p>
+              <a
+                href={project.source}
+                className="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View
+              </a>
+              <div className="project_btn">
+                <a
+                  href={project.fe}
+                  className="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Frontend Repo
+                </a>
+                <a
+                  href={project.be}
+                  className="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Backend Repo
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
-
-      {chosen && (
-        <div className="projectContainer__projects">
-          {clientProjects.map((project, index) => (
-            <ProjectItem
-              key={index}
-              img={project.img}
-              desc={project.desc}
-              title={project.title}
-              link={project.link}
-            />
-          ))}
-        </div>
-      )}
     </div>
   );
 };
