@@ -6,16 +6,16 @@ const Home = () => {
   return (
     <div className="topContent">
       <div className="topContent__container">
-        <h1>Mr.Raja</h1>
+        <h1>I Am Raja</h1>
         <p>Full-Stack Developer</p>
         <a
-          href="https://drive.google.com/file/d/19n-zE5oohh8jdeKoOCI8vCno61_JTllT"
+          href="https://drive.google.com/file/d/1M2Y8c1KhjdfQRO-9rKYGPMx1L8Qm9eSg/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
         >
           <button className="topContent__downloadButton">Download CV</button>
         </a>
-        <Link to="projects" smooth={true} duration={500}>
+        <Link to="/project">
           <button className="topContent__workButton">My Work</button>
         </Link>
       </div>
