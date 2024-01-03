@@ -1,4 +1,3 @@
-// Skills.js
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import {
@@ -32,7 +31,13 @@ const skills = [
 ];
 
 const Skill = ({ skill, index }) => (
-  <Col key={index} xs={12} md={3} className="skill-item text-center" style={{ backgroundColor: skill.color }}>
+  <Col
+    key={index}
+    xs={12}
+    md={3}
+    className="skill-item text-center"
+    style={{ backgroundColor: skill.color }}
+  >
     <div className="card-content">
       <h1>{skill.icon}</h1>
       <h4>{skill.name}</h4>

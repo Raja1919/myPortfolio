@@ -1,4 +1,3 @@
-// Project.js
 import React from "react";
 import "./Project.css";
 import img1 from "../Assets/img1.png";
