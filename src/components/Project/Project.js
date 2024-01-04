@@ -33,7 +33,7 @@ const Project = () => {
       title: "NoteApp",
       fe: "https://github.com/Raja1919/noteApp-Frontend",
       be: "https://github.com/Raja1919/noteApp_Backend",
-      desc: "Collaborative online platform for sharing thoughts and images. React-based frontend for creating, editing, and sharing notes. Utilizes Firebase or similar backend for data storage, ensuring a seamless and responsive user experience.",
+      desc: "NoteApp: Your go-to MERN stack note-taking app. Capture ideas effortlessly with MongoDB, Express.js, React, and Node.js. Streamlined, responsive, and ready to organize your thoughts on the fly.",
       source: "https://imaginative-gingersnap-10e28d.netlify.app/",
     },
   ];
