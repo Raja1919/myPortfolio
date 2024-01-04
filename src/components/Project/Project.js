@@ -31,8 +31,10 @@ const Project = () => {
     {
       img: img1,
       title: "NoteApp",
+      fe: "https://github.com/Raja1919/noteApp-Frontend",
+      be: "https://github.com/Raja1919/noteApp_Backend",
       desc: "Collaborative online platform for sharing thoughts and images. React-based frontend for creating, editing, and sharing notes. Utilizes Firebase or similar backend for data storage, ensuring a seamless and responsive user experience.",
-      source: "https://monumental-lolly-62d3ef.netlify.app/",
+      source: "https://imaginative-gingersnap-10e28d.netlify.app/",
     },
   ];
 
