@@ -58,3 +58,10 @@
 .topContent__workButton:hover {
   background-color: #27ae60;
 }
+.topContent__socialButtons{
+  padding: 10px;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}

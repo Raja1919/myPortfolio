@@ -1,11 +1,14 @@
 import React from "react";
 import "./Project.css";
-import img1 from "../Assets/img1.png";
+import dashboard from "../Assets/dashboard.png";
+import urlShort from "../Assets/urlShort.jpeg";
+import noteApp from "../Assets/noteApp.jpg";
+import productLister from "../Assets/productLister.jpeg";
 
 const Project = () => {
   const clientProjects = [
     {
-      img: img1,
+      img: dashboard,
       title: "Student Dashboard",
       fe: "https://github.com/Raja1919/zen-student-dashboard-frontend",
       be: "https://github.com/Raja1919/zen-student-dashboard-backend",
@@ -13,7 +16,7 @@ const Project = () => {
       source: "https://monumental-lolly-62d3ef.netlify.app/",
     },
     {
-      img: img1,
+      img: urlShort,
       title: "UrlShortener",
       fe: "https://github.com/Raja1919/urlShortener-Frontend",
       be: "https://github.com/Raja1919/urlShortener-Backend",
@@ -21,7 +24,7 @@ const Project = () => {
       source: "https://monumental-semifreddo-4bee5c.netlify.app/",
     },
     {
-      img: img1,
+      img: productLister,
       title: "ProductLister",
       fe: "https://github.com/Raja1919/Product_Lister_frontend",
       be: "https://github.com/Raja1919/Product_lister_backend",
@@ -29,7 +32,7 @@ const Project = () => {
       source: "https://lambent-kringle-33efaf.netlify.app",
     },
     {
-      img: img1,
+      img: noteApp,
       title: "NoteApp",
       fe: "https://github.com/Raja1919/noteApp-Frontend",
       be: "https://github.com/Raja1919/noteApp_Backend",
