@@ -28,7 +28,7 @@ const Project = () => {
       title: "ProductLister",
       fe: "https://github.com/Raja1919/Product_Lister_frontend",
       be: "https://github.com/Raja1919/Product_lister_backend",
-      desc: "Efficient city corporation complaint management. User-friendly React frontend for complaint submission, tracking, and resolution updates. Node.js and Express.js backend manages complaint data and database interactions.",
+      desc: "Intuitive and user-friendly interface for easy product entry, modification, and deletion.Easily add, edit, or remove product categories to adapt to your evolving inventory.Implement secure user authentication to protect sensitive data.Utilize the power of Node.js and Express.js for a scalable and efficient server-side architecture.Store and retrieve product data seamlessly with MongoDB, ensuring data integrity.",
       source: "https://lambent-kringle-33efaf.netlify.app",
     },
     {
