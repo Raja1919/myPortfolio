@@ -1,59 +1,63 @@
 
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
+  const [open, setOpen] = useState(false);
+  const { pathname } = useLocation();
+
+  const closeMenu = () => setOpen(false);
+
+  const navLinks = [
+    { path: "/", label: "Home" },
+    { path: "/about", label: "About" },
+    { path: "/skill", label: "Skills" },
+    { path: "/project", label: "Projects" },
+    { path: "/contact", label: "Contact" },
+  ];
+
   return (
-    <nav className="navbar navbar-expand-lg">
-      <div className="container-fluid">
-        <div className="header__left">
-          <h1>
-            Develop<span>er</span>
-          </h1>
-        </div>
+    <header className="site-header">
+      <div className="nav-shell">
+        <Link to="/" className="brand" onClick={closeMenu}>
+          <span className="brand__dot" />
+          Raja<span className="brand__accent">Dev</span>
+        </Link>
+
         <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
+          className={`nav-toggle ${open ? "is-open" : ""}`}
+          onClick={() => setOpen(!open)}
           aria-label="Toggle navigation"
+          aria-expanded={open}
         >
-          <span className="navbar-toggler-icon"></span>
+          <span />
+          <span />
+          <span />
         </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0 header__right">
-            <li className="nav-item">
-              <Link className="nav-link" to="/">
-                Home
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/about">
-                About
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/skill">
-                Skill
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/project">
-                Project
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/contact">
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </div>
+
+        <nav className={`nav-links ${open ? "open" : ""}`}>
+          {navLinks.map((link) => (
+            <Link
+              key={link.path}
+              to={link.path}
+              className={pathname === link.path ? "active" : ""}
+              onClick={closeMenu}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <a
+            className="pill-button"
+            href="https://drive.google.com/file/d/1PpiZaHWWVjC0_nsqPvuMfI44PsIETO5b/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Resume
+          </a>
+        </nav>
       </div>
-    </nav>
+    </header>
   );
 };
 

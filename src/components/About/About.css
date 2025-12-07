@@ -1,51 +1,77 @@
 .about {
-  background: black;
-  color: #fff;
-  padding: 30px 20px;
+  background: linear-gradient(180deg, #0b1221 0%, #0d1527 100%);
+  color: #e8f0ff;
+  padding: 70px 18px 80px;
 }
 
-.about h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.container {
-  max-width: 900px;
+.about__inner {
+  width: min(1100px, 100%);
   margin: 0 auto;
-  padding: 30px;
 }
 
-.section {
-  margin-bottom: 40px;
-  text-align: left;
+.about__header h2 {
+  font-size: clamp(2rem, 3vw, 2.7rem);
+  margin: 6px 0 14px;
 }
 
-.section h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: white;
-  text-align: center;
+.about__lede {
+  color: #c7d2e4;
+  line-height: 1.7;
+  max-width: 760px;
 }
 
-.section p {
-  font-size: 20px;
+.about__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.about__card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 18px 20px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+.about__card h3 {
+  margin: 0 0 12px;
+  color: #f8fbff;
+}
+
+.about__card p,
+.about__card li {
+  color: #c7d2e4;
   line-height: 1.6;
-  margin-bottom: 20px;
-  color: white;
+  margin: 0 0 12px;
 }
 
-.section b {
-  color: #3498db;
-  font-weight: bold;
+.about__card ul {
+  padding-left: 18px;
+  margin: 0;
 }
 
-.section a {
-  color: #3498db;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
+.chips {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.section a:hover {
-  color: #2980b9;
+.chip {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 12px 12px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.chip__title {
+  color: #a5b4fc;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.chip__copy {
+  margin: 0;
+  color: #c7d2e4;
 }
