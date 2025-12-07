@@ -1,87 +1,100 @@
 import React from "react";
 import "./Project.css";
-import dashboard from "../Assets/dashboard.png";
-import urlShort from "../Assets/urlShort.jpeg";
-import noteApp from "../Assets/noteApp.jpg";
-import productLister from "../Assets/productLister.jpeg";
 
 const Project = () => {
   const clientProjects = [
     {
-      img: dashboard,
       title: "Student Dashboard",
       fe: "https://github.com/Raja1919/zen-student-dashboard-frontend",
       be: "https://github.com/Raja1919/zen-student-dashboard-backend",
-      desc: "Empowering students with effective learning progress tracking, a user-friendly React UI, and secure authentication. Integration with Node.js and Express.js backend APIs ensures seamless access to course materials and real-time grade tracking. MongoDB and Git are leveraged for data storage and version control.",
+      desc: "Progress tracking, course material access, and secure auth with a React UI and Node/Express APIs backed by MongoDB.",
       source: "https://monumental-lolly-62d3ef.netlify.app/",
+      stack: "React · Node · MongoDB · JWT",
     },
     {
-      img: urlShort,
-      title: "UrlShortener",
+      title: "URL Shortener",
       fe: "https://github.com/Raja1919/urlShortener-Frontend",
       be: "https://github.com/Raja1919/urlShortener-Backend",
-      desc: "MERN-based URL shortener providing a concise, user-friendly, and secure experience. React handles user input, Node.js/Express processes backend operations, and MongoDB stores mappings. Security features include input validation, potential authentication, and rate-limiting. Deployed on platforms like Netlify.",
+      desc: "MERN-based link shortener with validation, rate limiting hooks, and friendly sharing URLs.",
       source: "https://monumental-semifreddo-4bee5c.netlify.app/",
+      stack: "React · Express · MongoDB",
     },
     {
-      img: productLister,
-      title: "ProductLister",
+      title: "Product Lister",
       fe: "https://github.com/Raja1919/Product_Lister_frontend",
       be: "https://github.com/Raja1919/Product_lister_backend",
-      desc: "Intuitive and user-friendly interface for easy product entry, modification, and deletion.Easily add, edit, or remove product categories to adapt to your evolving inventory.Implement secure user authentication to protect sensitive data.Utilize the power of Node.js and Express.js for a scalable and efficient server-side architecture.Store and retrieve product data seamlessly with MongoDB, ensuring data integrity.",
+      desc: "Inventory app to add, edit, and categorize products with auth and CRUD APIs.",
       source: "https://lambent-kringle-33efaf.netlify.app",
+      stack: "React · Node · MongoDB",
     },
     {
-      img: noteApp,
-      title: "NoteApp",
+      title: "Note App",
       fe: "https://github.com/Raja1919/noteApp-Frontend",
       be: "https://github.com/Raja1919/noteApp_Backend",
-      desc: "NoteApp: Your go-to MERN stack note-taking app. Capture ideas effortlessly with MongoDB, Express.js, React, and Node.js. Streamlined, responsive, and ready to organize your thoughts on the fly.",
+      desc: "Responsive notes tool for quick capture with secure backend and clean UI.",
       source: "https://imaginative-gingersnap-10e28d.netlify.app/",
+      stack: "React · Node · MongoDB",
     },
   ];
 
   return (
-    <div className="work_container">
-      <h1 className="project_heading">My Projects</h1>
-      <div className="project_container">
-        {clientProjects.map((project, index) => (
-          <div className="project_card" key={index}>
-            <img src={project.img} alt={project.title} />
-            <h2 className="project_title">{project.title}</h2>
-            <div className="project_desc">
-              <p>{project.desc}</p>
-              <a
-                href={project.source}
-                className="btn"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View
-              </a>
-              <div className="project_btn">
-                <a
-                  href={project.fe}
-                  className="btn"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Frontend Repo
-                </a>
-                <a
-                  href={project.be}
-                  className="btn"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Backend Repo
-                </a>
+    <section className="work_container">
+      <div className="work_inner">
+        <div className="work_header">
+          <p className="eyebrow">Selected Work</p>
+          <h1 className="project_heading">Projects that solve real problems</h1>
+          <p className="project_lede">
+            A mix of personal builds and coursework projects, each focused on clarity, performance, and
+            deployment-readiness.
+          </p>
+        </div>
+        <div className="project_container">
+          {clientProjects.map((project, index) => (
+            <article className="project_card" key={index}>
+              <div className="project_media">
+                <span className="media_badge">{project.stack}</span>
+                <p className="media_title">{project.title}</p>
               </div>
-            </div>
-          </div>
-        ))}
+              <div className="project_body">
+                <div className="project_top">
+                  <h2 className="project_title">{project.title}</h2>
+                  <p className="project_stack">{project.stack}</p>
+                  <p className="project_desc">{project.desc}</p>
+                </div>
+                <div className="project_actions">
+                  <a
+                    href={project.source}
+                    className="btn primary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Live demo
+                  </a>
+                  <div className="project_btn">
+                    <a
+                      href={project.fe}
+                      className="btn ghost"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Frontend
+                    </a>
+                    <a
+                      href={project.be}
+                      className="btn ghost"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Backend
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
